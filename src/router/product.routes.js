@@ -22,7 +22,7 @@ ProductRouter.put("/:id", async (req, res) =>{
     let updateProduct = req.body;
     res.send(await product.updateProducts(id, updateProduct));
 })
-ProductRouter.delete("/", async (req, res) => {
+ProductRouter.delete("/:id", async (req, res) => {
     let id = req.params.id
     res.send (await product.deleteProducts(id));
 })

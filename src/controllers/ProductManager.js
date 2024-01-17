@@ -57,7 +57,7 @@ class ProductManager {
         let products = await this.readProducts();
         let existProducts = products.some(prod => prod.id === id)
         if(existProducts) {
-            let filterProducts = products.filter(prod => prod.id != id)
+            let filterProducts = products.filter(prod => prod.id !== id)
             await this.writeProducts(filterProducts)
             return "Producto eliminado."
         }
