@@ -30,19 +30,15 @@ ProductRouter.get("/:id", async (req, res) => {
 
 ProductRouter.post("/", async (req, res) => {
     try {
-       
-        const { title, description, code, price, stock, category, thumbnails } = req.body;
+       const { title, description, code, price, stock, category, thumbnails } = req.body;
 
-        
         if (!title || !description || !code || !price || !stock || !category || !thumbnails) {
             return res.status(400).send("Todos los campos son obligatorios.");
         }
 
-        
         const id = nanoid();
         const status = true;
 
-        
         const newProduct = {
             id,
             title,
