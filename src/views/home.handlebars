@@ -1,0 +1,11 @@
+<div>
+    <h1 class="color_red">Lista de Productos</h1>
+    <a href="/realTimeProducts">agregar producto</a>
+    <ul>
+        {{#each products}}
+            <li>{{this.id}} - {{this.name}} - ${{this.price}}</li>
+        {{/each}}
+    </ul>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/socket.js"></script>
